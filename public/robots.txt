@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin areas (if any)
+# Disallow: /admin/
+
+Sitemap: https://skystarsolution.com/sitemap.xml
+

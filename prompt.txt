@@ -1,0 +1,30 @@
+Project: Skystar Solution — Premium dark-mode digital marketing agency landing page & portfolio
+
+Goal: Create a high-converting, ultra-premium dark-mode website (landing + multi-page site) for "Skystar Solution". Visual language: luxurious, minimal, neon-glow accents, glassmorphism panels, soft motion, precise typography, lots of negative space. Prioritize readability, modern micro-interactions, and strong visual hierarchy.
+
+Deliverables:
+- Landing / Home (hero, services, case studies, process, testimonials, pricing, CTA)
+- About (founder/CEO story, team bios, values)
+- Services (SEO, Paid Ads, Social Media, Content, Creative Studio, Web Dev)
+- Blog (SEO-optimized posts, categories: SEO, Digital Marketing, AIO, LMO, Case Studies)
+- Contact / Request a Quote (form + calendar link)
+- Separate components: Header/Nav, Footer, Hero, ServiceCard, CaseStudyCard, PricingCard, BlogCard, AuthorCard, ContactForm, Modal demo, Floating CTA, Cookie/consent
+- Accessibility: keyboard focus states, high contrast text, reduced motion alternative
+
+Visual specs:
+- Palette: #0b0f16 (bg), deep charcoal gradients, accent neon gradient (electric cyan -> magenta -> gold) used sparingly for glow and CTAs
+- Primary font: modern sans (Inter / Poppins); headings heavy weight with letter-spacing
+- Buttons: glass button + subtle neon outer glow; primary CTA filled with neon gradient and soft blur/golden rim
+- Effects: subtle parallax hero, soft shadows, frosted glass panels, hover glow, micro-interactions on links, smooth 60fps transitions (transform + opacity only)
+- Cursor: custom glowing cursor with trailing particles and magnet effect when hovering CTAs (see cursor snippet)
+- Mode: default dark only; include toggle for high-contrast mode
+- Performance: critical CSS, lazy load images, optimized LCP, Next.js image component
+
+Copy tone: confident, professional, slightly playful; short benefit-first headlines, strong social proof.
+
+SEO & content:
+- Meta tags for each page, OpenGraph images (preview with neon logo), structured data for Organization, BlogPosting for each post
+- Blog content should be SEO-optimized with H1/H2/H3 structure, keyword variations, internal links to services
+- Provide 5 starter SEO articles (outline + meta) including “What is AIO?”, “What is LMO?” and an SEO-optimized case study
+
+Deliver production-ready component list and Next.js + Tailwind starting scaffold, plus a developer handoff with assets, tokens, and interactions.

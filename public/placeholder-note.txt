@@ -1,0 +1,37 @@
+Add your images to this directory structure:
+
+/public/
+├── logo.png                    - Company logo
+├── og-image.jpg                - Social share image
+├── team/                       - Team member photos
+│   ├── alex.jpg
+│   ├── sarah.jpg
+│   ├── marcus.jpg
+│   ├── priya.jpg
+│   ├── jake.jpg
+│   └── lisa.jpg
+├── testimonials/               - Client testimonial photos
+│   ├── sarah.jpg
+│   ├── michael.jpg
+│   ├── emily.jpg
+│   └── david.jpg
+├── case-studies/               - Case study featured images
+│   ├── techgear.jpg
+│   ├── cloudsync.jpg
+│   └── homestyle.jpg
+├── blog/                       - Blog post images
+│   ├── what-is-aio.jpg
+│   ├── what-is-lmo.jpg
+│   ├── seo-checklist-2025.jpg
+│   └── content-strategy.jpg
+└── about/                      - About page images
+    └── founder.jpg
+
+See ASSET_REQUIREMENTS.md for image specifications.
+
+The 404 errors you see in development are EXPECTED until you add these images.
+They don't break the site - just add them when you're ready!
+
+
+
+

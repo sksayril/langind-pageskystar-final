@@ -489,7 +489,7 @@ export default function BlogPostPage({ params }: PageProps) {
               Ready to Achieve Similar Results?
             </h2>
             <p className="text-gray-300 mb-6">
-              Let's discuss how we can help your business grow with proven digital marketing strategies.
+              Let&apos;s discuss how we can help your business grow with proven digital marketing strategies.
             </p>
             <Link href="/contact" className="btn-primary inline-block">
               Schedule Free Consultation

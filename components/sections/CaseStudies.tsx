@@ -48,7 +48,7 @@ export default function CaseStudies() {
               Success <span className="neon-text">Stories</span>
             </h2>
             <p className="text-lg text-gray-300">
-              Real results for real businesses. See how we've helped brands achieve 
+              Real results for real businesses. See how we&apos;ve helped brands achieve 
               extraordinary growth through strategic digital marketing.
             </p>
           </div>

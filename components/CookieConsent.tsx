@@ -39,7 +39,7 @@ export default function CookieConsent() {
             </h3>
             <p className="text-sm text-gray-400 mb-4">
               We use cookies to enhance your browsing experience and analyze our traffic. 
-              By clicking "Accept", you consent to our use of cookies.
+              By clicking &quot;Accept&quot;, you consent to our use of cookies.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button

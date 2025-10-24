@@ -19,7 +19,7 @@ export default function CTA() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-                Let's build something extraordinary together. Schedule a free consultation 
+                Let&apos;s build something extraordinary together. Schedule a free consultation 
                 and discover how we can accelerate your growth.
               </p>
 

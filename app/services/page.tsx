@@ -159,7 +159,7 @@ export default function ServicesPage() {
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
               End-to-end digital marketing solutions designed to accelerate your growth. 
-              From strategy to execution, we've got you covered.
+              From strategy to execution, we&apos;ve got you covered.
             </p>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function ServicesPage() {
               
               <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                 <div className="card">
-                  <h3 className="font-heading font-bold text-xl mb-6">What's Included</h3>
+                  <h3 className="font-heading font-bold text-xl mb-6">What&apos;s Included</h3>
                   <ul className="space-y-4">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start space-x-3">
@@ -229,7 +229,7 @@ export default function ServicesPage() {
               Not Sure Which Service is Right for You?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Schedule a free consultation and we'll help you create a custom strategy 
+              Schedule a free consultation and we&apos;ll help you create a custom strategy 
               tailored to your goals and budget.
             </p>
             <Link href="/contact" className="btn-primary text-lg px-8 py-4">

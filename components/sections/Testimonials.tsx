@@ -60,7 +60,7 @@ export default function Testimonials() {
             Client <span className="neon-text">Success Stories</span>
           </h2>
           <p className="text-lg text-gray-300">
-            Don't just take our word for it. Hear from the brands we've helped grow.
+            Don&apos;t just take our word for it. Hear from the brands we&apos;ve helped grow.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function Testimonials() {
             </div>
             
             <blockquote className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-              "{current.quote}"
+              &quot;{current.quote}&quot;
             </blockquote>
             
             <div className="flex items-center space-x-4">

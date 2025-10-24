@@ -35,7 +35,7 @@ export default function FloatingCTA() {
             </button>
           </div>
           <p className="text-sm text-gray-400 mb-4">
-            Let's discuss how we can transform your digital presence.
+            Let&apos;s discuss how we can transform your digital presence.
           </p>
           <div className="space-y-2">
             <Link

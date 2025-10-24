@@ -89,7 +89,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl font-heading mb-6">
-              We're <span className="neon-text">Skystar Solution</span>
+              We&apos;re <span className="neon-text">Skystar Solution</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
               A team of digital strategists, creatives, and data scientists on a mission 
@@ -119,7 +119,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  Skystar Solution was born from a simple observation: most businesses weren't 
+                  Skystar Solution was born from a simple observation: most businesses weren&apos;t 
                   getting the results they deserved from their digital marketing efforts.
                 </p>
                 <p>
@@ -133,8 +133,8 @@ export default function AboutPage() {
                   through strategic thinking, creative excellence, and data-driven execution.
                 </p>
                 <p>
-                  Today, we're proud to partner with forward-thinking brands who refuse to settle 
-                  for mediocrity. Together, we're redefining what's possible in digital marketing.
+                  Today, we&apos;re proud to partner with forward-thinking brands who refuse to settle 
+                  for mediocrity. Together, we&apos;re redefining what&apos;s possible in digital marketing.
                 </p>
               </div>
               <div className="mt-8">

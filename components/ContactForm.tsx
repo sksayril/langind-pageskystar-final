@@ -62,7 +62,7 @@ export default function ContactForm({ title = 'Get in Touch', subtitle }: Contac
             <Send size={32} className="text-dark-bg" />
           </div>
           <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-          <p className="text-gray-400">We'll get back to you within 24 hours.</p>
+          <p className="text-gray-400">We&apos;ll get back to you within 24 hours.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">

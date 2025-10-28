@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
   try {
     await connectDB()
 
-    const admin = await Admin.findOne({ email: 'sksayril123@gmail.com' }).select('-password')
+    const admin = await (Admin as any).findOne({ email: 'sksayril123@gmail.com' })
     
     if (!admin) {
       return NextResponse.json(

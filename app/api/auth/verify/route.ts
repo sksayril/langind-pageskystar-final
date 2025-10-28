@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
     const decoded = jwt.verify(token, JWT_SECRET) as any
     await connectDB()
 
-    const admin = await Admin.findById(decoded.adminId).select('-password')
+    const admin = await (Admin as any).findById(decoded.adminId)
     if (!admin) {
       return NextResponse.json(
         { error: 'Admin not found' },

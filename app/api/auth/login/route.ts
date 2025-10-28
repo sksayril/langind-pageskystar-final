@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import mongoose from 'mongoose'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://cripcocode:sksayril123@45.129.86.243:27017/skystarconact'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://cripcocode:sksayril123@45.129.86.243:27017/skystarconact?authSource=admin'
 
 // Admin Schema
 const AdminSchema = new mongoose.Schema({

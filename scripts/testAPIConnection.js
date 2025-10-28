@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 async function testAPIConnection() {
   try {
-    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://cripcocode:sksayril123@45.129.86.243:27017/skystarconact'
+    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://cripcocode:sksayril123@45.129.86.243:27017/skystarconact?authSource=admin'
     console.log('Testing API connection to:', MONGODB_URI)
     
     // Test the exact same connection as API

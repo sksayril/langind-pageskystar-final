@@ -5,6 +5,9 @@ import Admin from '@/models/Admin'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
 
+// Mark this route as dynamic since it reads cookies at runtime
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   try {
     const token = request.cookies.get('admin-token')?.value

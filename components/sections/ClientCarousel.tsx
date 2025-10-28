@@ -95,7 +95,7 @@ export default function ClientCarousel() {
             Our <span className="neon-text">Trusted Clients</span>
           </h2>
           <p className="text-lg text-gray-300">
-            We're proud to partner with innovative businesses across various industries, 
+            We&apos;re proud to partner with innovative businesses across various industries, 
             helping them achieve their digital marketing goals.
           </p>
         </div>

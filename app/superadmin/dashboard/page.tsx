@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { 
   Users, 
@@ -40,12 +40,7 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('dashboard')
   const router = useRouter()
 
-  useEffect(() => {
-    fetchContacts()
-    verifyAuth()
-  }, [])
-
-  const verifyAuth = async () => {
+  const verifyAuth = useCallback(async () => {
     try {
       const response = await fetch('/api/auth/verify')
       if (!response.ok) {
@@ -54,7 +49,12 @@ export default function AdminDashboard() {
     } catch (error) {
       router.push('/superadmin')
     }
-  }
+  }, [router])
+
+  useEffect(() => {
+    fetchContacts()
+    verifyAuth()
+  }, [verifyAuth])
 
   const fetchContacts = async () => {
     try {

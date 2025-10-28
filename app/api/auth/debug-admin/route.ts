@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
     await connectDB()
     console.log('Database connected')
 
-    const admin = await Admin.findOne({ email: 'sksayril123@gmail.com' })
+    const admin = await (Admin as any).findOne({ email: 'sksayril123@gmail.com' })
     console.log('Admin query result:', admin)
 
     if (!admin) {

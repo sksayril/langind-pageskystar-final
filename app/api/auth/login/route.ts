@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if admin exists (case insensitive)
-    const admin = await Admin.findOne({ email: email.toLowerCase() })
+    const admin = await (Admin as any).findOne({ email: email.toLowerCase() })
     if (!admin) {
       return NextResponse.json(
         { error: 'Invalid credentials' },

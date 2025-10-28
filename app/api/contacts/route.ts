@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
   try {
     await connectDB()
 
-    const contacts = await Contact.find().sort({ createdAt: -1 })
+    const contacts = await (Contact as any).find().sort({ createdAt: -1 })
 
     return NextResponse.json({ contacts }, { status: 200 })
   } catch (error) {

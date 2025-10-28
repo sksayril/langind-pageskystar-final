@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
     }
     console.log('API: Database connected')
 
-    const admin = await Admin.findOne({ email: 'sksayril123@gmail.com' })
+    const admin = await (Admin as any).findOne({ email: 'sksayril123@gmail.com' })
     console.log('API: Admin found:', admin ? 'Yes' : 'No')
     
     if (!admin) {

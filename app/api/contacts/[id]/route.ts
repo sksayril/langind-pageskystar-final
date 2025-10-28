@@ -12,7 +12,7 @@ export async function PUT(
     
     await connectDB()
 
-    const contact = await Contact.findByIdAndUpdate(
+    const contact = await (Contact as any).findByIdAndUpdate(
       id,
       { status },
       { new: true }

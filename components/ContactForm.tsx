@@ -12,36 +12,56 @@ export default function ContactForm({ title = 'Get in Touch', subtitle }: Contac
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     service: '',
     budget: '',
+    timeline: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
-
-    setIsSubmitting(false)
-    setSubmitted(true)
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        budget: '',
-        message: '',
+    try {
+      const response = await fetch('/api/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-    }, 3000)
+
+      if (response.ok) {
+        setSubmitted(true)
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            company: '',
+            service: '',
+            budget: '',
+            timeline: '',
+            message: '',
+          })
+        }, 3000)
+      } else {
+        const data = await response.json()
+        setError(data.error || 'Failed to submit form')
+      }
+    } catch (error) {
+      setError('Network error. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -66,6 +86,11 @@ export default function ContactForm({ title = 'Get in Touch', subtitle }: Contac
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
+          {error && (
+            <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
+              {error}
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -102,6 +127,22 @@ export default function ContactForm({ title = 'Get in Touch', subtitle }: Contac
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
+              <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                Phone Number *
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-3 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-cyan bg-transparent text-white"
+                placeholder="+1 (555) 123-4567"
+              />
+            </div>
+            
+            <div>
               <label htmlFor="company" className="block text-sm font-medium mb-2">
                 Company Name
               </label>
@@ -115,14 +156,17 @@ export default function ContactForm({ title = 'Get in Touch', subtitle }: Contac
                 placeholder="Your Company"
               />
             </div>
-            
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="service" className="block text-sm font-medium mb-2">
-                Service Interested In
+                Service Interested In *
               </label>
               <select
                 id="service"
                 name="service"
+                required
                 value={formData.service}
                 onChange={handleChange}
                 className="w-full px-4 py-3 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-cyan bg-dark-bg text-white"
@@ -135,6 +179,26 @@ export default function ContactForm({ title = 'Get in Touch', subtitle }: Contac
                 <option value="creative">Creative Studio</option>
                 <option value="web-dev">Web Development</option>
                 <option value="all">Full Package</option>
+              </select>
+            </div>
+            
+            <div>
+              <label htmlFor="timeline" className="block text-sm font-medium mb-2">
+                Project Timeline
+              </label>
+              <select
+                id="timeline"
+                name="timeline"
+                value={formData.timeline}
+                onChange={handleChange}
+                className="w-full px-4 py-3 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-cyan bg-dark-bg text-white"
+              >
+                <option value="">Select timeline</option>
+                <option value="asap">ASAP</option>
+                <option value="1-month">Within 1 month</option>
+                <option value="3-months">Within 3 months</option>
+                <option value="6-months">Within 6 months</option>
+                <option value="flexible">Flexible</option>
               </select>
             </div>
           </div>

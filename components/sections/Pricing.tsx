@@ -3,7 +3,7 @@ import PricingCard from '../PricingCard'
 const pricingPlans = [
   {
     name: 'Basic',
-    price: '₹1,099',
+    price: '₹10,099',
     period: 'month',
     description: 'Perfect for small businesses starting their digital journey.',
     features: [

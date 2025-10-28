@@ -9,7 +9,7 @@ const testimonials = [
     name: 'Sarah Johnson',
     role: 'CEO',
     company: 'TechGear Pro',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
     quote: 'Skystar Solution transformed our online presence completely. Our revenue increased by 900% within 8 months. Their strategic approach and attention to detail are unmatched.',
     rating: 5,
   },

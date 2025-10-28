@@ -3,13 +3,19 @@ Add your images to this directory structure:
 /public/
 ├── logo.png                    - Company logo
 ├── og-image.jpg                - Social share image
-├── team/                       - Team member photos
-│   ├── alex.jpg
-│   ├── sarah.jpg
-│   ├── marcus.jpg
-│   ├── priya.jpg
-│   ├── jake.jpg
-│   └── lisa.jpg
+├── clients/                    - Client company logos ✅
+│   ├── techgear-logo.png      ✅
+│   ├── cloudsync-logo.png    ✅
+│   ├── homestyle-logo.png    ✅
+│   ├── fitlife-logo.png      ✅
+│   ├── ecogreen-logo.png     ✅
+│   └── foodiehub-logo.png    ✅
+├── team/                       - Team member photos ✅
+│   ├── biplop-roy.jpg         ✅
+│   ├── samrin-sultana.jpg     ✅
+│   ├── nargis-sultana.jpg     ✅
+│   ├── kabita-das.jpg         ✅
+│   └── sk-sayril-amed.jpg     (placeholder avatar)
 ├── testimonials/               - Client testimonial photos
 │   ├── sarah.jpg
 │   ├── michael.jpg

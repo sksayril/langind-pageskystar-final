@@ -26,7 +26,8 @@
     "node-fetch": "^3.3.2",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "react-intersection-observer": "^9.10.0"
+    "react-intersection-observer": "^9.10.0",
+    "sharp": "^0.34.4"
   },
   "devDependencies": {
     "@types/node": "^20.12.0",

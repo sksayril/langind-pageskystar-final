@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import mongoose from 'mongoose'
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://cripcocode:sksayril123@45.129.86.243:27017/skystarconact?authSource=admin'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://globespotmlm:globespotmlm@cluster0.qwwrkho.mongodb.net/skystar'
 
 // Admin Schema
 const AdminSchema = new mongoose.Schema({

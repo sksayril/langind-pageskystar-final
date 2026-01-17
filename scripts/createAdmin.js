@@ -26,7 +26,7 @@ const Admin = mongoose.model('Admin', AdminSchema)
 async function createAdmin() {
   try {
     // Connect to MongoDB
-    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://cripcocode:sksayril123@45.129.86.243:27017/skystarconact?authSource=admin'
+    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://globespotmlm:globespotmlm@cluster0.qwwrkho.mongodb.net/skystar'
     console.log('Connecting to:', MONGODB_URI)
     await mongoose.connect(MONGODB_URI)
     console.log('Connected to MongoDB')

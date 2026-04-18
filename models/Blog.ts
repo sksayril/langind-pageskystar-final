@@ -1,6 +1,30 @@
-import mongoose from 'mongoose'
+import mongoose, { Schema, model, models, Model } from 'mongoose'
 
-const BlogSchema = new mongoose.Schema({
+export interface IBlog {
+  title: string
+  slug: string
+  content: string
+  excerpt: string
+  featuredImage: string
+  category: string
+  tags: string[]
+  author: {
+    name: string
+    avatar: string
+  }
+  readTime: string
+  metaTitle?: string
+  metaDescription?: string
+  focusKeyword?: string
+  imageAltText?: string
+  canonicalUrl?: string
+  ogImage?: string
+  isPublished: boolean
+  createdAt: Date
+  updatedAt: Date
+}
+
+const BlogSchema = new Schema<IBlog>({
   title: {
     type: String,
     required: true,
@@ -12,7 +36,7 @@ const BlogSchema = new mongoose.Schema({
     lowercase: true,
   },
   content: {
-    type: String, // Rich text content (HTML or Markdown)
+    type: String,
     required: true,
   },
   excerpt: {
@@ -20,8 +44,7 @@ const BlogSchema = new mongoose.Schema({
     required: true,
   },
   featuredImage: {
-    type: String, // URL to image
-    required: true,
+    type: String,
   },
   category: {
     type: String,
@@ -69,4 +92,5 @@ BlogSchema.pre('save', function(next) {
   next()
 })
 
-export default mongoose.models.Blog || mongoose.model('Blog', BlogSchema)
+const Blog: Model<IBlog> = models.Blog || model<IBlog>('Blog', BlogSchema)
+export default Blog

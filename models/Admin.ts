@@ -1,6 +1,12 @@
-import mongoose from 'mongoose'
+import mongoose, { Schema, model, models, Model } from 'mongoose'
 
-const AdminSchema = new mongoose.Schema({
+export interface IAdmin {
+  email: string
+  password: string
+  createdAt?: Date
+}
+
+const AdminSchema = new Schema<IAdmin>({
   email: {
     type: String,
     required: true,
@@ -17,4 +23,5 @@ const AdminSchema = new mongoose.Schema({
   },
 })
 
-export default mongoose.models.Admin || mongoose.model('Admin', AdminSchema)
+const Admin: Model<IAdmin> = models.Admin || model<IAdmin>('Admin', AdminSchema)
+export default Admin

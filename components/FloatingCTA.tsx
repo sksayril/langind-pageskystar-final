@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { MessageCircle, X } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 export default function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,7 @@ export default function FloatingCTA() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  if (pathname?.startsWith('/superadmin')) return null
   if (!isVisible) return null
 
   return (

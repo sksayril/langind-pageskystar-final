@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { Cookie } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 export default function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent')
@@ -24,6 +26,7 @@ export default function CookieConsent() {
     setShowConsent(false)
   }
 
+  if (pathname?.startsWith('/superadmin')) return null
   if (!showConsent) return null
 
   return (

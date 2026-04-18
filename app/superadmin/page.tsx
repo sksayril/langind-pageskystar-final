@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Eye, EyeOff, Lock, Mail } from 'lucide-react'
+import Link from 'next/link'
 
 export default function SuperAdminLogin() {
   const [email, setEmail] = useState('')
@@ -137,6 +138,16 @@ export default function SuperAdminLogin() {
               <p><strong>Email:</strong> sksayril123@gmail.com</p>
               <p><strong>Password:</strong> sksayril123@</p>
             </div>
+          </div>
+
+          {/* Signup Link */}
+          <div className="mt-6 text-center">
+            <p className="text-gray-400 text-sm">
+              Don't have an account?{' '}
+              <Link href="/superadmin/signup" className="text-neon-cyan hover:underline font-medium">
+                Create Admin
+              </Link>
+            </p>
           </div>
         </div>
 

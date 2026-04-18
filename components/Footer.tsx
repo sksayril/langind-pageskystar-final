@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react'
 
 const footerLinks = {
@@ -39,6 +42,12 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+  const pathname = usePathname()
+
+  if (pathname?.startsWith('/superadmin')) {
+    return null
+  }
+
   return (
     <footer className="bg-dark-surface border-t border-dark-border">
       <div className="container-custom py-12 md:py-16">

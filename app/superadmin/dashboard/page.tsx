@@ -902,10 +902,11 @@ export default function AdminDashboard() {
                       blogs.map((blog) => (
                         <div key={blog._id} className="bg-[#0f0f12] rounded-[2rem] border border-white/5 overflow-hidden group">
                           <div className="relative h-48">
-                            <img 
+                            <Image 
                               src={blog.featuredImage} 
                               alt={blog.title}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                             <div className="absolute top-4 left-4">
                               <span className="px-3 py-1 bg-dark-bg/80 backdrop-blur rounded-full text-[10px] font-bold uppercase tracking-widest text-neon-cyan border border-neon-cyan/20">
